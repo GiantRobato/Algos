@@ -14,8 +14,6 @@
 #     Output: [1]
 
 def bubble_sort(arr):
-    if len(arr) == 0 or len(arr) == 1:
-        return arr
     for i in range(len(arr) - 1):
         for j in range(0,len(arr) - i - 1):
             if arr[j] > arr[j+1]:          
@@ -36,4 +34,4 @@ print("testing:")
 for testNum in range(len(tests)):    
     print("test #{0}".format(testNum))
     print("input:\t{0}".format(tests[testNum]))
-    print("output:\t{0}".format(bubble_sort(tests[testNum])))
+    print("output:\t{0}".format(bubble_sort(tests[testNum][:])))
