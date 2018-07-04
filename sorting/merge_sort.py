@@ -21,10 +21,8 @@ def merge_sort_driver(arr):
 def merge(arr,l,m,r):
     L = arr[l:m]
     R = arr[m:r]
-    i = 0
-    j = 0
-    k = l
-    for x in range(k,r):
+    i = j = 0
+    for x in range(l,r):
         if j >= len(R) or i < len(L) and L[i] < R[j]:
             arr[x] = L[i]
             i += 1
